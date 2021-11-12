@@ -31,4 +31,24 @@ diamond(5) -->
 """
 
 def diamond(size):
-  pass  # delete this when you start writing your code
+  star="*"
+  print(star.center(2*size-1))
+  for i in range(1, size+1):
+    for j in range(1,size-i+1):
+      print('',end='')
+    for j in range(1,2*i):
+      if j==1 or j==2*i-1:
+        print('*', end='')
+      else:
+        print('', end='')
+  for i in range(size-1,0,-1):
+    for j in range (1,size-i+1):
+      print('',end="")
+    for j in range(1,2*i):
+      if j==1 or j==2*i:
+        print('*',end='')
+      else:
+        print('',end='')
+  print(star.center(2*size-1))
+
+      
